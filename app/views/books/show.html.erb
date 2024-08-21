@@ -1,2 +1,14 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1>Bookdetail</h1>
+<table>
+    <tbody>
+        <tr>
+            <td></td>
+            <td><%= @book.title %></td>
+            <td><%= @book.opinion %></td>
+            <% if user_signed_in? %>
+            <td><%= link_to "Edit", "#" %></td>
+            <td><%= link_to "Destroy", "#" %></td>
+            <% end %>
+        </tr>
+    </tbody>
+</table>
